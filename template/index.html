@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        textarea {
+            display: block;
+            width: 230px;
+            height: 50px;
+            padding: 10px;
+            margin-bottom: 10px;
+            resize: none;
+        }
+
+        .controls {
+            margin-top: 37px;
+            height: 28%;
+        }
+
+        .image {
+            height: 20%;
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="controls">
+            <form action="/getImage" method="POST">
+                <textarea type="text" name="fname"></textarea>
+                <button type="submit">Generate Image</button>
+            </form>
+        </section>
+        <section class="image">
+            <img src="{{src}}" alt="" />
+        </section>
+    </div>
+</body>
+
+</html>
